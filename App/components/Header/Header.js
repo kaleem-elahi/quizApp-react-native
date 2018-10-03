@@ -17,7 +17,7 @@ class HeaderContainer extends Component{
       >
         <Left />
         <Body>
-          <Title>{this.props.title}</Title>
+          <Title style={styles.title}>{this.props.title}</Title>
         </Body>
       </Header>
     );

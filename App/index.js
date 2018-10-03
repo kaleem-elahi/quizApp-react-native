@@ -26,7 +26,7 @@ export default class AppNavigator extends Component<Props> {
           <Route path="/first" component={FirstScreen} />
           <Route path="/second" component={SecondScreen} />
           <Route path="/third" component={ThirdScreen} />
-          <Route path="/final" component={DisplayDetails} />
+          <Route path="/result" component={DisplayDetails} />
         </View>
       </NativeRouter>
     );

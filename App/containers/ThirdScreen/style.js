@@ -14,5 +14,11 @@ export default StyleSheet.create({
     color: '#fff',
     fontSize: 15,
     fontFamily: 'Poppins-Regular'
+  },
+  alignHeader: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between'
   }
 });

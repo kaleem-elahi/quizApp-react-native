@@ -13,8 +13,8 @@ export default StyleSheet.create({
     height: '100%',
     flexDirection: 'row',
     alignItem: 'center',
-    justifyContent: 'center',
-    textAlign: 'center'
+    textAlign: 'center',
+    marginTop: 10
   },
   welcomeText: {
     color: 'rgb(255, 2, 2)',
@@ -32,5 +32,20 @@ export default StyleSheet.create({
     color: '#fff',
     fontSize: 15,
     fontFamily: 'Poppins-Regular'
+  },
+  totalMarks: {
+    color: 'rgb(255, 2, 2)',
+    fontSize: 18,
+    fontFamily: 'Poppins-Bold'
+  },
+  alignButton: {
+    flex: 1,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  alignRow: {
+    flexDirection: 'row',
+    alignItems: 'center'
   }
 });

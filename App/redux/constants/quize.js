@@ -1,1 +1,2 @@
 export const UPDATE_MARKS = 'UPDATE_MARKS'
+export const RESET_MARKS = 'RESET_MARKS'

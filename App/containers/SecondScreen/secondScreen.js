@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { View, CheckBox } from "react-native";
 import { connect } from 'react-redux';
 import { Button, Card, CardItem, Body, Text } from "native-base";
+import TimerCountdown from 'react-native-timer-countdown';
 import { updateMarks } from '../../redux/actions/quize';
 import styles from './style'
 import HeaderContainer from '../../components/Header/index'
@@ -32,19 +33,16 @@ class SecondScreen extends Component{
         }
       ]
     }
-    alert(this.state.marks);
   }
 
   checkAnswer = () => {
     if(this.state.answer === this.state.selected) {
       const total = this.state.marks + 10
-      alert(total)
-      this.props.save(total)
+      this.props.save(total, '')
       this.props.history.push('/third')
     } else {
       const total = this.state.marks - 1
-      alert(total)
-      this.props.save(total)
+      this.props.save(total, '')
       this.props.history.push('/third')
     }
   }
@@ -56,7 +54,19 @@ class SecondScreen extends Component{
         <View style={styles.alignCenter}>
           <Card>
             <CardItem header bordered>
-              <Text style={{color: 'rgb(255, 2, 2)'}}>Question</Text>
+              <View style={styles.alignHeader}>
+                <View>
+                  <Text style={{color: 'rgb(255, 2, 2)'}}>Question</Text>
+                </View>
+                <View>
+                  <TimerCountdown
+                    initialSecondsRemaining={1000*120}
+                    onTimeElapsed={() => this.checkAnswer()}
+                    allowFontScaling={true}
+                    style={{ fontSize: 20, color: 'rgb(255, 2, 2)' }}
+                  />
+                </View>
+              </View>
             </CardItem>
             <CardItem bordered>
             <Body>
