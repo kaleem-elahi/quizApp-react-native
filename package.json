@@ -8,8 +8,12 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "native-base": "^2.8.1",
     "react": "16.5.0",
-    "react-native": "0.57.1"
+    "react-native": "0.57.1",
+    "react-redux": "^5.0.7",
+    "react-router-native": "^4.3.0",
+    "redux": "^4.0.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",
@@ -25,5 +29,4 @@
       "./assets/fonts/"
     ]
   }
-
 }
